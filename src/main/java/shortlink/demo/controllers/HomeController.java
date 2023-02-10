@@ -28,10 +28,8 @@ public class HomeController {
     }
 
     @GetMapping("/{link}")
-    public RedirectView redirect(@PathVariable("link") String urlNew, RedirectAttributes attributes) {
+    public RedirectView redirect(@PathVariable("link") String urlNew) {
         Optional<Link> link = repository.findByUrlNew(urlNew);
-        attributes.addFlashAttribute("flashAttribute", "redirectWithRedirectView");
-        attributes.addAttribute("attribute", "redirectWithRedirectView");
         return new RedirectView(link.get().getUrl());
     }
 
