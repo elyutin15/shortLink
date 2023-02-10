@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ShortLink</title>
+</head>
+<body>
+    <form method="POST" th:action="@{/}" th:object="${link}">
+        <input th:field="*{url}" type="text" maxlength="50">
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
