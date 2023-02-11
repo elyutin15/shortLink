@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>ShortLink</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
 </head>
 <body>
-<p>http://localhost:8080/<span th:text="${link.url}"></span></p>
+    <p class="finalPage">http://localhost:8080/<span th:text="${link.url}"></span></p>
 </body>
 </html>

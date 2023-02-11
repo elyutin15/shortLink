@@ -4,11 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <title>ShortLink</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}"/>
 </head>
 <body>
-    <form method="POST" th:action="@{/}" th:object="${link}">
-        <input th:field="*{url}" type="text" maxlength="50">
-        <input type="submit" value="submit">
-    </form>
+    <div>
+        <p class="typeLink">Type your link</p>
+
+        <form method="POST" th:action="@{/}" th:object="${link}" class="typeLink">
+            <input th:field="*{url}" type="text" maxlength="50" class="inputForm">
+            <input type="submit" value="submit" class="submitButton">
+        </form>
+
+    </div>
 </body>
 </html>
